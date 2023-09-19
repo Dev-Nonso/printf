@@ -14,7 +14,7 @@
 int _printf(const char *format, ...)
 {
 	unsigned int i;
-        unsigned int num_count = 0;
+	unsigned int num_count = 0;
 
 	va_list count_args;
 
@@ -30,7 +30,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == 'c' || format[i] == 'd' || format[i] == 's')
+			if (format[i] == 'c' || format[i] == 'd' || format[i] == 's'
+			|| format[i] == 'i')
 			{
 				num_count += my_selector(format[i])(count_args);
 			}

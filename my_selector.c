@@ -27,5 +27,9 @@ int (*my_selector(char len))(va_list count_args)
 	{
 		return (&string__handler);
 	}
+	else if (len == 'i')
+	{
+		return (&integeri__handler);
+	}
 	return (0);
 }

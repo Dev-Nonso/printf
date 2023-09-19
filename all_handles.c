@@ -23,11 +23,11 @@ int char__handler(va_list t_args)
  */
 int integer__handler(va_list t_args)
 {
-	int counter;
+	unsigned int counter;
 
-	int value = va_arg(t_args, int);
+	unsigned int value = va_arg(t_args, unsigned int);
 
-	counter = number_count(value, 0);
+	counter = number_count(value, 0, 0);
 
 	return (counter);
 }

@@ -4,6 +4,7 @@
  * number_count - Counts the number of digits in an unsigned integer.
  * @n: The unsigned integer to count digits in.
  * @counter: The current count of digits.
+ * @isOctal: counting the integer i digits.
  *
  * This function counts the number of digits in an unsigned
  * integer 'n'. If 'n'
@@ -14,7 +15,7 @@
  * Return: The total count of digits in 'n'.
  */
 
-int number_count(unsigned int n, int counter)
+int number_count(unsigned int n, int counter, unsigned int isOctal)
 {
 	if (n <= 0)
 	{
@@ -24,8 +25,14 @@ int number_count(unsigned int n, int counter)
 	}
 	if (n / 10)
 	{
-		counter = number_count(n / 10, counter);
+		counter = number_count(n / 10, counter, isOctal);
 	}
 	__putchar(n % 10 + '0');
+
+	if (isOctal)
+	{
+		counter++;
+		__putchar('0');
+	}
 	return (counter + 1);
 }
