@@ -2,6 +2,7 @@
 
 /**
  * number_count - Counts the number of digits in an unsigned integer.
+ by Chinonso and Ezekiel
  * @n: The unsigned integer to count digits in.
  * @counter: The current count of digits.
  * @isOctal: counting the integer i digits.
