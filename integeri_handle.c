@@ -2,6 +2,7 @@
 
 /**
  * integeri__handler - Handle integers using va_list
+ by Chinonso and Ezekiel
  * @t_args: A va_list of arguments
  *
  * Return: The count of integers processed
