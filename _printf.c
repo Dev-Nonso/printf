@@ -13,8 +13,8 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i;
-	unsigned int num_count = 0;
+	int i;
+	int num_count = 0;
 
 	va_list count_args;
 

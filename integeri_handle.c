@@ -9,11 +9,11 @@
 
 int integeri__handler(va_list t_args)
 {
-	unsigned int counter;
+	int counter;
 
-	unsigned int val_i = va_arg(t_args, unsigned int);
+	int val = va_arg(t_args, int);
 
-	counter = number_count(val_i, 0, 0);
+	counter = number_count(val, 0);
 
 	return (counter);
 }

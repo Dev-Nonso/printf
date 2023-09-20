@@ -15,7 +15,7 @@
  * Return: The total count of digits in 'n'.
  */
 
-int number_count(unsigned int n, int counter, unsigned int isOctal)
+int number_count(unsigned int n, int counter)
 {
 	if (n <= 0)
 	{
@@ -25,14 +25,8 @@ int number_count(unsigned int n, int counter, unsigned int isOctal)
 	}
 	if (n / 10)
 	{
-		counter = number_count(n / 10, counter, isOctal);
+		counter = number_count(n / 10, counter);
 	}
 	__putchar(n % 10 + '0');
-
-	if (isOctal)
-	{
-		counter++;
-		__putchar('0');
-	}
 	return (counter + 1);
 }

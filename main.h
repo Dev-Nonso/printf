@@ -12,7 +12,7 @@ int char__handler(va_list count_args);
 int integer__handler(va_list count_args);
 int string__handler(va_list count_args);
 int (*my_selector(char len))(va_list count_args);
-int number_count(unsigned int n, int counter, unsigned int isOctal);
+int number_count(unsigned int n, int counter);
 int _printf(const char *format, ...);
 int integeri__handler(va_list t_args);
 
