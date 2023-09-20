@@ -2,6 +2,7 @@
 
 /**
  * my_selector - Selects a function based on the input character.
+ by Chinonso and Ezekiel
  * @len: The character representing the type of function to select.
  *
  * This function takes a character 'len' as input and returns a function

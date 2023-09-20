@@ -2,6 +2,7 @@
 
 /**
  * string__handler - Handles a string.
+ by Chinonso and Ezekiel
  * @t_args: A va_list containing the string to handle.
  * This function takes a va_list t_args, extracts a
  * string from it using va_arg.`
