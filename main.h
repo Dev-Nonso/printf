@@ -15,6 +15,7 @@ int (*my_selector(char len))(va_list count_args);
 int number_count(unsigned int n, int counter);
 int _printf(const char *format, ...);
 int integeri__handler(va_list t_args);
+int convert_bin(unsigned int u);
 
 
 #endif /* MAIN_H */

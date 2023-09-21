@@ -1,22 +1,14 @@
 #include "main.h"
-
 /**
  * _printf - Custom printf function.
- by Chinonso and Ezekiel
  * @format: A format string specifying the output format.
- *
- * This function takes a format string and a variable number of arguments
- * and prints formatted output according to the format specifier in the string.
  * It supports '%c' for characters, '%d' for integers, and '%s' for strings.
- *
  * Return: The total number of characters printed.
  */
-
 int _printf(const char *format, ...)
 {
 	int i;
 	int num_count = 0;
-
 	va_list count_args;
 
 	if (!format || (format[0] == '%' && !format[1]))
@@ -41,7 +33,7 @@ int _printf(const char *format, ...)
 			{
 				num_count += my_selector(format[i])(count_args);
 			}
-			else if(format[i] == '%')
+			else
 			{
 				num_count += __putchar('%');
 				continue;
@@ -52,6 +44,5 @@ int _printf(const char *format, ...)
 			num_count += __putchar(format[i]);
 		}
 	}
-
 	return (num_count);
 }
