@@ -19,6 +19,11 @@ int _printf(const char *format, ...)
 
 	va_list count_args;
 
+	if (!format || (format[0] == '%' && !format[1]))
+		return (1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
+
 	va_start(count_args, format);
 
 	if (format == NULL)
@@ -36,7 +41,7 @@ int _printf(const char *format, ...)
 			{
 				num_count += my_selector(format[i])(count_args);
 			}
-			else
+			else if(format[i] == '%')
 			{
 				num_count += __putchar('%');
 				continue;
